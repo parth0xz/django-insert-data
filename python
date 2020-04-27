@@ -1,0 +1,6 @@
+BEGIN;
+--
+-- Create model Parth1
+--
+CREATE TABLE "polls_parth1" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" text NOT NULL, "surname" text NOT NULL, "title" varchar(80) NOT NULL);
+COMMIT;

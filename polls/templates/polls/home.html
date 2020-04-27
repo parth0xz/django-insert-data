@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+    <title>Home Page</title>
+  </head>
+  <body>
+    
+    <form action="" method="POST" >  
+{% csrf_token %}  
+
+  <label >Name</label>
+  <input type="text" name="name" required value="" />
+  <label >Surname</label>
+  <input type="text" name="surname" required value=""/>
+  <label >Title</label>
+  <input type="text" name="title" required value=""/>
+ <input type="submit" value="Submit"/>
+</form>
+    <form action="" method="POST" >  
+{% csrf_token %}  
+
+ 
+ 
+ <table>
+  <tr>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Title</th>
+  </tr>
+  {% for p in parth %}
+  <tr>
+    
+    <td>{{ p.name }}</td>
+    <td>{{ p.surname }}</td>
+    <td>{{ p.title }}</td>
+   
+  </tr>
+  {% endfor %}
+ </table>
+    
+  </body>
+</html>
